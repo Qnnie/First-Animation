@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+}
+
+#stage {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #e09f9f;
+}
+
+#profile-pic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background-image: url(https://avatars1.githubusercontent.com/u/47100252?s=460&v=4);
+    background-size: cover;
+    border: 10px #f3f3f3 solid;
+    z-index: 2;
+}
+
+.petal {
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 60px;
+    margin-right: auto;
+    width: 30px;
+    height: 30px;
+    background: #f3f3f3;   
+    border-radius: 50px;
+}
+
+/*ANIMATIONS START*/
+/*Notes: 
+    animation: name duration timing-function delay direction
+    animation: name duration timing-function delay iteration count direction
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.petal:nth-child(1) {
+    animation: moving 2s linear 0.15s forwards;
+}
+.petal:nth-child(2) {
+    animation: moving 2s linear 0.30s forwards;
+}
+.petal:nth-child(3) {
+    animation: moving 2s linear 0.45s forwards;
+}
+.petal:nth-child(4) {
+    animation: moving 2s linear 0.60s forwards;
+}
+.petal:nth-child(5) {
+    animation: moving 2s linear 0.75s forwards;
+}
+.petal:nth-child(6) {
+    animation: moving 2s linear 0.90s forwards;
+}
+.petal:nth-child(7) {
+    animation: moving 2s linear 0.15s forwards;
+}
+.petal:nth-child(8) {
+    animation: moving 2s linear 0.15s forwards;
+}
+
+
+@keyframes moving {
+    0% {
+        transform: translateX(0px) translateY(0px) scaleX(1) scaleY(1);
+    }
+    20% {
+        transform: translateX(120px) translateY(0px) scaleX(.90) scaleY(.90);
+    }
+    40% {
+        transform: translateX(120px) translateY(220px) scaleX(1) scaleY(1);
+    }
+    60% {
+        transform: translateX(-120px) translateY(220px) scaleX(.90) scaleY(.90);
+    }
+    80% {
+        transform: translateX(-120px) translateY(0px) scaleX(1) scaleY(1);
+    }
+    100% {
+        transform: translateX(0px) translateY(0px) scaleX(.90) scaleY(.90);
+
+    }
+}
+    
